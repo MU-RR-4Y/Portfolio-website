@@ -57,7 +57,7 @@ const Navbar = () => {
         </div>
 
         {/* TOGGLE MENU */}
-        <div className={ nav ? 'fixed left-0 top-0 w-full h-screen bg-black/70 ': ''}>  {/* sets dark background on screen behind moblie menu pop up*/}
+        <div className={ nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 ': ''}>  {/* sets dark background on screen behind moblie menu pop up*/}
             <div 
             className={ 
                 nav 
