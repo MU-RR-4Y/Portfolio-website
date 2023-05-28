@@ -45,12 +45,14 @@ const Navbar = () => {
         "fixed w-full h-20 z-[100]"
         }>
         <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-            <Image 
-                src="/../public/assets/navLogo.png" 
-                alt="/" 
-                width={125} 
-                height={50}
-            />
+            <Link href='/'>
+                <Image 
+                    src="/../public/assets/navLogo.png" 
+                    alt="/" 
+                    width={100} 
+                    height={40}
+                    />
+            </Link> 
             <div>
                 <ul className="hidden md:flex">
                     <Link href='/'>
@@ -69,7 +71,12 @@ const Navbar = () => {
                         <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
                     </Link>
                 </ul>
+
+
+
              {/* Mobile Navbar */}
+
+             
                 <div onClick={handleNav} className='md:hidden'>
                     <AiOutlineMenu size={25}/>
                 </div>
@@ -101,19 +108,19 @@ const Navbar = () => {
                 <div className="py-4 flex flex-col">
                     <ul className="uppercase">
                         <Link href='/'>
-                            <li className="py-4 text-sm">Home</li>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">Home</li>  {/* onClick closes mobile nav when an option is clicked */}
                         </Link>
-                        <Link href='/'>
-                            <li className="py-4 text-sm">About</li>
+                        <Link href='/#about'>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">About</li>
                         </Link>
-                        <Link href='/'>
-                            <li className="py-4 text-sm">Skills</li>
+                        <Link href='/#skills'>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">Skills</li>
                         </Link>
-                        <Link href='/'>
-                            <li className="py-4 text-sm">Projects</li>
+                        <Link href='/#projects'>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">Projects</li>
                         </Link>
-                        <Link href='/'>
-                            <li className="py-4 text-sm">Contact</li>
+                        <Link href='/#contact'>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">Contact</li>
                         </Link>
                     </ul>
                     <div className="pt-40">
