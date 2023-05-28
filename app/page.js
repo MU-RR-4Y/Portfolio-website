@@ -6,9 +6,10 @@ import Projects from '@/components/Projects'
 import Image from 'next/image'
 import Contact from '@/components/Contact'
 
+
 export default function Home() {
   return (
-    <div>
+    <div className='main'>
       <Navbar/>
       <Main/>
       <About/>
