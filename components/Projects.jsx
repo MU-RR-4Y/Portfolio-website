@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import propertyImg from '../public/assets/projects/property.jpg'
+import cryptoImg from '../public/assets/projects/crypto.jpg'
+import netflixImg from '../public/assets/projects/netflix.jpg'
+import twitchImg from '../public/assets/projects/twitch.jpg'
 import Link from 'next/link'
 import ProjectItem from './ProjectItem'
 
@@ -12,7 +15,28 @@ const Projects = () => {
             <h2 className='py-4'>What I've built</h2>
             <div className='grid md:grid-cols-2 gap-8'>
 
-                <ProjectItem/>
+                <ProjectItem 
+                title ='Property Finder App' 
+                backgroundImg = {propertyImg} 
+                projectUrl='/property' 
+                />
+                <ProjectItem 
+                title ='Crypto App' 
+                backgroundImg = {cryptoImg} 
+                projectUrl='/crypto' 
+                />
+                <ProjectItem 
+                title ='Netflix Clone' 
+                backgroundImg = {netflixImg} 
+                projectUrl='/netflix' 
+                />
+                <ProjectItem 
+                title ='Twitch Clone' 
+                backgroundImg = {twitchImg} 
+                projectUrl='/twitch' 
+                />
+
+                
 
             </div>
         </div>
