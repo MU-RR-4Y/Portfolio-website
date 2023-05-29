@@ -11,7 +11,7 @@ const Contact = () => {
 
     <div className='w-full lg:h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
-            <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
+            <p className='text-xl tracking-widest uppercase font-bold text-[#1166E6]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>
             <div className='grid lg:grid-cols-5 gap-8'>
             {/* left-side div */}
@@ -25,24 +25,24 @@ const Contact = () => {
                                 />
                         </div>
                         <div>
-                            <h2 className='py-2'>Name here</h2>
-                            <p>Junior Developer</p>
+                            <h2 className='text-[#004aad] py-2'>Michael <span className='text-[#1166E6]'>Murray</span></h2>
+                            <p className='text-[#ff914d] font-bold'>Junior Developer</p>
                             <p className='py-4'>Contact details below</p>
                         </div>
                         {/* social links */}
                         <div>
                             <p className='uppercase pt-8'>Connect with Me</p>
                             <div className='flex items-center justify-between py-4'>
-                                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaLinkedinIn/>
                                     </div>
-                                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaGithub/>
                                     </div>
-                                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <AiOutlineMail/>
                                     </div>
-                                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <BsPersonLinesFill/>
                                     </div>
                             </div>

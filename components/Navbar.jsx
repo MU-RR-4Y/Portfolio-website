@@ -15,8 +15,10 @@ const Navbar = () => {
 
     const [nav,setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
-    const [navBackground, setNavBackground] = useState('#ecf0f3')
-    const [linkColour, setLinkColour] = useState('#1f2937')
+    const [navBackground, setNavBackground] = useState('#F4F3EE');
+    const [linkColour, setLinkColour] = useState('#1166e6');
+    const [iconVisible, setIconVisible] = useState(true);
+    const [mobileMenu, setMobileMenu] = useState('#004AAD')
     
 
     //useEffects
@@ -42,10 +44,12 @@ const Navbar = () => {
             pathname ==='/twitch'
         ) {
             setNavBackground('transparent')
-            setLinkColour('#ecf0f3')
+            setLinkColour('#F4F3EE')
+            setMobileMenu('#F4F3EE')
         } else {
-            setNavBackground('#ecf0f3')
-            setLinkColour('#1f2937')
+            setNavBackground('#F4F3EE')
+            setLinkColour('#1166e6')
+            setMobileMenu('#1166e6')
         }
     }, [pathname])
 
@@ -66,36 +70,36 @@ const Navbar = () => {
         style={{backgroundColor: `${navBackground}`}}
         className={
         shadow ?
-        "fixed w-full h-20 shadow-xl z-[100]"
+        "fixed w-full h-20 shadow-lg z-[100]"
         :
         "fixed w-full h-20 z-[100]"
         }>
         <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
             <Link href='/'>
                 <Image 
-                    src="/../public/assets/navLogo.png" 
+                    src="/../public/assets/nav_Logo.png" 
                     alt="/" 
                     width={100} 
-                    height={40}
+                    height={100}
                     />
             </Link> 
             <div>
                 <ul style={{color :`${linkColour}`}}
                 className="hidden md:flex">
                     <Link href='/'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+                        <li className="ml-10 text-sm font-bold uppercase hover:border-b"> Home</li>
                     </Link>
                     <Link href='/#about'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+                        <li className="ml-10 text-sm uppercase hover:border-b font-bold">About</li>
                     </Link>
                     <Link href='/#skills'> 
-                        <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+                        <li className="ml-10 text-sm uppercase hover:border-b font-bold">Skills</li>
                     </Link>
                     <Link href='/#projects'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
+                        <li className="ml-10 text-sm uppercase hover:border-b font-bold">Projects</li>
                     </Link>
                     <Link href='/#contact'>
-                        <li  className="ml-10 text-sm uppercase hover:border-b">Contact</li>
+                        <li  className="ml-10 text-sm uppercase hover:border-b font-bold">Contact</li>
                     </Link>
                 </ul>
 
@@ -104,7 +108,7 @@ const Navbar = () => {
              {/* Mobile Navbar */}
 
              
-                <div onClick={handleNav} className='md:hidden'>
+                <div onClick={handleNav} style={{color : `${mobileMenu}`}} className='md:hidden'>
                     <AiOutlineMenu size={25}/>
                 </div>
             </div>
@@ -115,17 +119,18 @@ const Navbar = () => {
             <div 
             className={ 
                 nav 
-                ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' 
+                ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#F4F3EE] p-10 ease-in duration-500' 
                 : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
                 }>
                 <div className="flex w-full items-center justify-between">
                     <Image 
-                        src={'/../public/assets/navLogo.png'}
+                        src={'/../public/assets/nav_Logo.png'}
                         alt='/'
-                        width={60}
-                        height={20}
+                        width={100}
+                        height={40}
                     />
-                    <div onClick={handleNav}  className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
+                    <div onClick={handleNav}  
+                        className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
                         <AiOutlineClose/>
                     </div>
                 </div>
@@ -153,16 +158,16 @@ const Navbar = () => {
                     <div className="pt-40">
                         <p className="uppercase tracking-widest text-[#5651e5">Let's Connect</p>
                         <div className="flex items-center justify-between my-4 w-fullsm:w-[80%]">
-                            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <FaLinkedinIn/>
                             </div>
-                            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <FaGithub/>
                             </div>
-                            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <AiOutlineMail/>
                             </div>
-                            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <BsPersonLinesFill/>
                             </div>
                         </div>    
