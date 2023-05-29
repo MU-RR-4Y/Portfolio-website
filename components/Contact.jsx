@@ -7,7 +7,9 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <div id='contact' className='w-full lg:h-screen'>
+    <div id='contact' className='pt-8'>
+
+    <div className='w-full lg:h-screen'>
         <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
             <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>
@@ -20,7 +22,7 @@ const Contact = () => {
                                 className='rounded-xl hover:scale-105 ease-in duration-300' 
                                 src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8c21VQmNwQjVLQVV8fGVufDB8fHx8fA%3D%3D&dpr=1&auto=format&fit=crop&w=294&h=294&q=60" 
                                 alt="/" 
-                            />
+                                />
                         </div>
                         <div>
                             <h2 className='py-2'>Name here</h2>
@@ -92,6 +94,7 @@ const Contact = () => {
                 </Link>
             </div>
         </div>
+    </div>
     </div>
   )
 }

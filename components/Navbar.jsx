@@ -6,6 +6,8 @@ import React, {useState, useEffect} from 'react'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {BsPersonLinesFill} from 'react-icons/bs';
+import { usePathname } from 'next/navigation';
+
 
 const Navbar = () => {
 
@@ -13,9 +15,11 @@ const Navbar = () => {
 
     const [nav,setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
+    const [navBackground, setNavBackground] = useState('#ecf0f3')
+    const [linkColour, setLinkColour] = useState('#1f2937')
+    
 
-
-    //useEffect
+    //useEffects
 
     useEffect(()=>{
         const handleShadow = ()=>{
@@ -27,6 +31,26 @@ const Navbar = () => {
         }
         window.addEventListener('scroll', handleShadow);
     }, [])
+    
+    const pathname = usePathname();
+  
+    useEffect(()=>{
+        if(
+            pathname ==='/property' ||
+            pathname ==='/crypto' ||
+            pathname ==='/netflix' ||
+            pathname ==='/twitch'
+        ) {
+            setNavBackground('transparent')
+            setLinkColour('#ecf0f3')
+        } else {
+            setNavBackground('#ecf0f3')
+            setLinkColour('#1f2937')
+        }
+    }, [pathname])
+
+
+
 
     // TOGGELMENU FUNCTION
     
@@ -38,7 +62,9 @@ const Navbar = () => {
     //RETURN
 
   return (
-    <div className={
+    <div 
+        style={{backgroundColor: `${navBackground}`}}
+        className={
         shadow ?
         "fixed w-full h-20 shadow-xl z-[100]"
         :
@@ -54,7 +80,8 @@ const Navbar = () => {
                     />
             </Link> 
             <div>
-                <ul className="hidden md:flex">
+                <ul style={{color :`${linkColour}`}}
+                className="hidden md:flex">
                     <Link href='/'>
                         <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
                     </Link>
@@ -68,7 +95,7 @@ const Navbar = () => {
                         <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
                     </Link>
                     <Link href='/#contact'>
-                        <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
+                        <li  className="ml-10 text-sm uppercase hover:border-b">Contact</li>
                     </Link>
                 </ul>
 

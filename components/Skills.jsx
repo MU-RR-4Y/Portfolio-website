@@ -3,7 +3,9 @@ import React from 'react'
 
 const Skills = () => {
   return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
+    <div id='skills' className='pt-20'>
+
+    <div className='w-full lg:h-screen p-2'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
             <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Skills</p>
             <h2 className='py-4'>What I Can Do</h2>
@@ -17,7 +19,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>HTML</h3>
@@ -32,7 +34,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>CSS</h3>
@@ -47,7 +49,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>JavaScript</h3>
@@ -62,7 +64,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>React</h3>
@@ -77,7 +79,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>Next.JS</h3>
@@ -92,7 +94,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>Node</h3>
@@ -107,7 +109,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>TailwindCSS</h3>
@@ -122,7 +124,7 @@ const Skills = () => {
                                 alt='/'
                                 width={64}
                                 height={64}
-                            />
+                                />
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <h3>Github</h3>
@@ -137,6 +139,7 @@ const Skills = () => {
             </div>
         </div>
     </div>
+   </div>
   )
 }
 
