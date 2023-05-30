@@ -32,18 +32,12 @@ const Contact = () => {
                         {/* social links */}
                         <div>
                             <p className='uppercase pt-8'>Connect with Me</p>
-                            <div className='flex items-center justify-between py-4'>
+                            <div className='flex items-center justify-around py-4'>
                                     <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaLinkedinIn/>
                                     </div>
                                     <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                         <FaGithub/>
-                                    </div>
-                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                                        <AiOutlineMail/>
-                                    </div>
-                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                                        <BsPersonLinesFill/>
                                     </div>
                             </div>
                         </div>
@@ -88,8 +82,8 @@ const Contact = () => {
             </div>
             <div className='flex justify-center py-12'>
                 <Link href={'/'}>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                        <HiOutlineChevronDoubleUp className='m-auto text-[#5651e5]' size={30}/>
+                    <div className="rounded-full shadow-lg shadow-[#004AAD] p-4 cursor-pointer hover:scale-105 ease-in duration-300">
+                        <HiOutlineChevronDoubleUp className='m-auto text-[#1166E6]' size={30}/>
                     </div>
                 </Link>
             </div>

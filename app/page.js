@@ -9,7 +9,7 @@ import Contact from '@/components/Contact'
 
 export default function Home() {
   return (
-    <div >
+    <div  className='bg-center bg-cover bg-no-repeat custom-img'>
       
       <Main/>
       <About/>

@@ -3,9 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, {useState, useEffect} from 'react'
-import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai';
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
-import {BsPersonLinesFill} from 'react-icons/bs';
 import { usePathname } from 'next/navigation';
 
 
@@ -15,7 +14,7 @@ const Navbar = () => {
 
     const [nav,setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
-    const [navBackground, setNavBackground] = useState('#F4F3EE');
+    const [navBackground, setNavBackground] = useState('');
     const [linkColour, setLinkColour] = useState('#1166e6');
     const [iconVisible, setIconVisible] = useState(true);
     const [mobileMenu, setMobileMenu] = useState('#004AAD')
@@ -25,7 +24,7 @@ const Navbar = () => {
 
     useEffect(()=>{
         const handleShadow = ()=>{
-            if(window.scrollY >= 90){
+            if(window.scrollY >= 30){
                 setShadow(true)
             } else {
                 setShadow(false)
@@ -35,19 +34,36 @@ const Navbar = () => {
     }, [])
     
     const pathname = usePathname();
+
+    useEffect(()=>{
+        const handleNavBg = ()=>{
+            if(pathname==='/' && window.scrollY>1){
+                
+                    
+                    setNavBackground('#F4F3EE')
+                } else {
+                    
+                    setNavBackground('transparent')
+                           }
+            
+        }
+        window.addEventListener('scroll', handleNavBg);
+    }, [pathname])
+    
   
     useEffect(()=>{
         if(
-            pathname ==='/property' ||
-            pathname ==='/crypto' ||
-            pathname ==='/netflix' ||
-            pathname ==='/twitch'
+            pathname ==='/martian' ||
+            pathname ==='/dino' ||
+            pathname ==='/travel-wishlist' 
+            
         ) {
             setNavBackground('transparent')
             setLinkColour('#F4F3EE')
             setMobileMenu('#F4F3EE')
         } else {
-            setNavBackground('#F4F3EE')
+            const oldNavBackground = navBackground
+            setNavBackground('transparent')
             setLinkColour('#1166e6')
             setMobileMenu('#1166e6')
         }
@@ -157,19 +173,15 @@ const Navbar = () => {
                     </ul>
                     <div className="pt-40">
                         <p className="uppercase tracking-widest text-[#5651e5">Let's Connect</p>
-                        <div className="flex items-center justify-between my-4 w-fullsm:w-[80%]">
+                        <div className="flex  justify-around my-4 w-fullsm:w-[80%]">
                             <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <Link href={'https://www.linkedin.com/in/michael-murray-92003474/'}><FaLinkedinIn/></Link>
                             </div>
                             <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                                 <Link href={'https://github.com/MU-RR-4Y'}><FaGithub/></Link>
                             </div>
-                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                <AiOutlineMail/>
-                            </div>
-                            <div className="rounded-full shadow-lg shadow-[#004AAD] p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                                <BsPersonLinesFill/>
-                            </div>
+
+
                         </div>    
                     </div>
                 </div>

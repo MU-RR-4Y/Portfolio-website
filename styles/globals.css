@@ -6,9 +6,12 @@ html{
     scroll-behavior: smooth!important;
 }
 
+.custom-img{
+    background-image: url('https://images.pexels.com/photos/7130467/pexels-photo-7130467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
 @layer base {
     body {
-        @apply bg-[#F4F3EE] text-[#1f2937] tracking-wide
+        @apply  text-[#1f2937] tracking-wide bg-[#F4F3EE]
     }
 
     h1,h2,h3,h4,h5,h6{

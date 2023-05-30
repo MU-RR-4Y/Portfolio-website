@@ -4,6 +4,11 @@ import propertyImg from '../public/assets/projects/property.jpg'
 import cryptoImg from '../public/assets/projects/crypto.jpg'
 import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
+import TW from '../public/assets/projects/TravelWishlist.png'
+import TW2 from '../public/assets/projects/TravelWishlist2.png'
+import Dino from '../public/assets/projects/Dino_trumps.png'
+import Martian from '../public/assets/projects/MartianSurvival.png'
+import Martian2 from '../public/assets/projects/MartianSurvival2.png'
 import Link from 'next/link'
 import ProjectItem from './ProjectItem'
 
@@ -18,27 +23,23 @@ const Projects = () => {
             <div className='grid md:grid-cols-2 gap-8'>
 
                 <ProjectItem 
-                title ='Property Finder App' 
-                backgroundImg = {propertyImg} 
-                projectUrl='/property' 
+                title ='Martian Survival' 
+                backgroundImg = {Martian} 
+                technology='Unity & C#'
+                projectUrl='/martian' 
                 />
                 <ProjectItem 
-                title ='Crypto App' 
-                backgroundImg = {cryptoImg} 
-                projectUrl='/crypto' 
+                title ='Dino Trumps' 
+                backgroundImg = {Dino} 
+                technology='React.JS, Express, MondoDB'
+                projectUrl='/dino' 
                 />
                 <ProjectItem 
-                title ='Netflix Clone' 
-                backgroundImg = {netflixImg} 
-                projectUrl='/netflix' 
-                />
-                <ProjectItem 
-                title ='Twitch Clone' 
-                backgroundImg = {twitchImg} 
-                projectUrl='/twitch' 
-                />
-
-                
+                title ='Travel Wishlist App' 
+                backgroundImg = {TW} 
+                technology='Python, Flask, PostgreSQL'
+                projectUrl='/travel-wishlist' 
+                />             
 
             </div>
         </div>
