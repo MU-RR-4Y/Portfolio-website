@@ -16,33 +16,31 @@ const Navbar = () => {
     const [shadow, setShadow] = useState(false);
     const [navBackground, setNavBackground] = useState('');
     const [linkColour, setLinkColour] = useState('#1166e6');
-    const [iconVisible, setIconVisible] = useState(true);
     const [mobileMenu, setMobileMenu] = useState('#004AAD')
     
 
-    //useEffects
+// useEffects
 
-    useEffect(()=>{
-        const handleShadow = ()=>{
-            if(window.scrollY >= 30){
-                setShadow(true)
-            } else {
-                setShadow(false)
-            }
-        }
-        window.addEventListener('scroll', handleShadow);
-    }, [])
+    // useEffect(()=>{
+    //     const handleShadow = ()=>{
+    //         if(window.scrollY >= 30){
+    //             setShadow(true)
+    //         } else {
+    //             setShadow(false)
+    //         }
+    //     }
+    //     window.addEventListener('scroll', handleShadow);
+    // }, [])
     
     const pathname = usePathname();
 
     useEffect(()=>{
         const handleNavBg = ()=>{
             if(pathname==='/' && window.scrollY>1){
-                
-                    
+                    setShadow(true)
                     setNavBackground('#F4F3EE')
                 } else {
-                    
+                    setShadow(false)
                     setNavBackground('transparent')
                            }
             
