@@ -31,13 +31,14 @@ const page = () => {
                     Martian Survival is a 3rd person wave survival game built in Unity using C#. This was built over a 2 week period for a Capstone Project at CodeClan.
                 </p>
                 <h3 className='mt-4'> Game Mechanics</h3>
-                <p>The player survives enemy waves by shooting enemies or building towers to kill the enemies. There are currently 10 rounds to survive, with each round offering increasing numbers of emenies. The game also incorporates a resource system. Towers cost 50 resources 
+                <p>The player survives enemy waves by shooting enemies or building towers to kill the enemies. There are currently 10 rounds to survive, with each round offering increasing numbers of enemies. The game also incorporates a resource system. Towers cost 50 resources 
                     and after starting with an initial 50 resources you can only gain more by killing enemies.
                 </p>
                 <h3 className='mt-4'>Learning</h3>
                 <p>
                     Prior to starting this project I had no experience with either Unity or C#, however I was able to use my experience working with Java 
-                    to help me learn the scripting required for C# in the game. 
+                    to help me learn the scripting required for C# in the game. I also learned the basics of Unity and how to work with character models, animations and movement. 
+        
                 </p>
 
                 {/* <div className=" w-[80%] h-auto m-auto shadow-xl shadow-[#ff914d] rounded-xl  p-4">

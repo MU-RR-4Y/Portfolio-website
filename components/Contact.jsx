@@ -34,10 +34,10 @@ const Contact = () => {
                             <p className='uppercase pt-8'>Connect with Me</p>
                             <div className='flex items-center justify-around py-4'>
                                     <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                                        <FaLinkedinIn/>
+                                    <Link href={'https://www.linkedin.com/in/michael-murray-92003474/'}><FaLinkedinIn/></Link>
                                     </div>
                                     <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                                        <FaGithub/>
+                                    <Link href={'https://github.com/MU-RR-4Y'}><FaGithub/></Link>
                                     </div>
                             </div>
                         </div>
@@ -50,17 +50,13 @@ const Contact = () => {
 
                 <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                     <div className='p-4'>
-                        <form>
-                            <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                                <div className='flex flex-col'>
+                        <form >
+                            {/* <div className='grid md:grid-cols-2 gap-4 w-full py-2'> */}
+                                <div className='flex flex-col py-2'>
                                     <label className='uppercase text-sm py-2'>Name:</label>
                                     <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
                                 </div>
-                                <div className='flex flex-col'>
-                                    <label className='uppercase text-sm py-2'>Phone Number:</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
-                                </div>
-                            </div>
+                            {/* </div> */}
                             <div className='flex flex-col py-2'>
                                 <label className='uppercase text-sm py-2'>Email:</label>
                                 <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email" />
