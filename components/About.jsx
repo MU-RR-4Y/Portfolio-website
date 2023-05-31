@@ -14,13 +14,13 @@ const About = () => {
                     I am used to working in a high volume and fast paced environment, I am a quick learner and love to tackle and solve problems. 
                 </p> 
                 <p className="py-2 text-gray-600">
-                  I initially explored software developmnet through self learning as a hobby and then opted to pursue a career change via CodeClan’s Software Development course 
+                  I initially explored software development through self-learning as a hobby and then opted to pursue a career change via CodeClan’s Software Development course 
                    and I am now eager to build upon my new skills as I grow my career as a developer.
                 </p>
                 <p className="py-2 text-gray-600">
-                  The CodeClan course was an intensive full time 16-week bootcamp covering fundamentals of development in Python, Javascript & Java.
+                  The CodeClan course was an intensive full time 16-week bootcamp covering fundamentals of development in Python, Javascript & Java. I completed over 800 hours of coding, finishing 2 solo projects and a group project in the process.
                 </p>
-                <Link href={'/#projects'}><p className="py-2 text-[#ff914d] font-bold underline cursor-pointer">Check out some of my latest projects</p></Link>
+                <Link href={'/#projects'}><p className="py-2 text-[#ff914d] font-bold underline cursor-pointer">Check out my projects</p></Link>
             </div>
             <div className="w-full h-auto m-auto shadow-xl shadow-[#ff914d] rounded-xl flex items-center justify-center p-4">
                 <img className="rounded-xl" 
