@@ -27,18 +27,21 @@ const page = () => {
         <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
             <div className='col-span-4'>
                 <h2>Overview</h2>
-                <p>
-                    Martian Survival is a 3rd person wave survival game built in Unity using C#. This was built over a 2 week period for a Capstone Project at CodeClan.
+                <p className='py-2'>
+                    Martian Survival is a 3rd person wave survival game built in Unity using C#. This was built over a 2 week period for a solo Capstone Project at CodeClan.
                 </p>
                 <h3 className='mt-4'> Game Mechanics</h3>
-                <p>The player survives enemy waves by shooting enemies or building towers to kill the enemies. There are currently 10 rounds to survive, with each round offering increasing numbers of enemies. The game also incorporates a resource system. Towers cost 50 resources 
-                    and after starting with an initial 50 resources you can only gain more by killing enemies.
+                <p className='py-2'>The player survives enemy waves by shooting enemies or building towers to kill the enemies. There are currently 10 rounds to survive, with each round offering increasing numbers of enemies. The game also incorporates a resource system. Towers cost 50 resources 
+                    and, after starting with an initial 50 resources, you only gain more by killing enemies.
                 </p>
                 <h3 className='mt-4'>Learning</h3>
-                <p>
+                <p className='py-2'>
                     Prior to starting this project I had no experience with either Unity or C#, however I was able to use my experience working with Java 
-                    to help me learn the scripting required for C# in the game. I also learned the basics of Unity and how to work with character models, animations and movement. 
-        
+                    to help me learn the scripting required for C# in the game. 
+                    I learned the basics of Unity and how to work with character models, animations and movement.
+                </p>
+                <p className='py-2'>
+                   I also learned about the use of multiple cameras, lighting and building out a UI for the game, while also exploring the more advanced area of post processing.
                 </p>
 
                 {/* <div className=" w-[80%] h-auto m-auto shadow-xl shadow-[#ff914d] rounded-xl  p-4">

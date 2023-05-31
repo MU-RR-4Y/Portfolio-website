@@ -7,10 +7,11 @@ import Dino from '../../public/assets/projects/Dino_trumps.png'
 const page = () => {
   return (
     <div className='w-full'>
-        <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
-            <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/70 z-10'/>
+        <div className='w-screen h-[40vh] lg:h-[60vh] relative'>
+            <div className='absolute top-0 left-0 w-full h-[40vh] lg:h-[60vh] bg-black/70 z-10'/>
             <Image
-                className='absolute z-1 object-cover'
+                className='absolute z-1 object-cover
+                 '
                 fill
                 src={Dino}
                 alt='/'
@@ -22,9 +23,27 @@ const page = () => {
         </div>
         <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
             <div className='col-span-4'>
-                <p>Project</p>
                 <h2>Overview</h2>
-                <p>This app was built using ****** and i learned ******</p>
+                <p>Dino Trumps is a dinosaur take on the popular card game top trumps. This was built over a week as a group project using Node.JS React,Express & MongoDb.</p>
+                <h3 className='mt-4'>Game Mechanics</h3>
+                <p className='py-2'>
+                    Both the player and computer begin with 15 cards and the player has the option to select one of 6 attributes to compare against the hidden computer card. 
+                    Once a selection is made, the computer card is revealed and the respective value on each card is compared with the highest value winning.                  
+                </p>
+                <p className='py-2'>
+                    The winner receives both cards to their hand and in the occurence of a draw then both cards are held in a 'Draw pile'.
+                    The cards in the 'Draw pile' are allocated to the winner of the next turn.
+                    Currently the first to hold 20 cards in their hand wins.                      
+                </p>
+                <h3 className='mt-4'>Learning</h3>
+                <p className='py-2'>
+                    Developing the project as a part of a group of four allowed me to implement Agile princilpes - from our initial planning meetings to utilising daily standups and review of work being completd.
+                    The main learning take away from this project was using Git/Github in a group project, developing across multiple branches for fixes and features and dealing with pull and merge requests and conflicts.
+                </p>
+                <p className='py-2'>    
+                    Additionally I gained experience working with APIs, initially reveiwing a host of available APIs for the game before implementing our own.
+                </p>
+
                 {/* <button className='px-8 py-2 mt-4 mr-8'>Demo</button> */}
                 <button className='px-8 py-2 mt-4'>Code</button>
             </div>
@@ -32,12 +51,10 @@ const page = () => {
                 <div className='p-2'>
                     <p>Technologies</p>
                     <div className='grid grid-cols-3 md:grid-cols-1'> 
-                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> React</p>
-                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> Tailwind CSS</p>
                         <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> JavaScript</p>
-                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> Firebase</p>
-                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> Google API</p>
-                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> Zillow API</p>
+                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> React</p>
+                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> Express</p>
+                        <p className='text-gray-600 py-2 flex items-center'><RiRadioButtonFill className='pr-2'/> MongoDB</p>   
                     </div>
                 </div>
             </div>

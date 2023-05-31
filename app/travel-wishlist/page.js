@@ -8,10 +8,10 @@ import TW2 from '../../public/assets/projects/TravelWishlist2.png'
 const page = () => {
   return (
     <div className='w-full'>
-        <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
-            <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/70 z-10'/>
+        <div className='w-screen h-[40vh] lg:h-[60vh] relative'>
+            <div className='absolute top-0 left-0 w-full h-[40vh] lg:h-[60vh] bg-black/70 z-10'/>
             <Image
-                className='absolute z-1 object-cover'
+                className='absolute z-1'
                 fill
                 src={TW}
                 alt='/'
