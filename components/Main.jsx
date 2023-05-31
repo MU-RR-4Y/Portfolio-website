@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const Main = () => {
   return (
-    <div id='home' className="w-full h-screen text-center ">
+    <div id='home' className="w-full h-screen text-center pt-10">
         <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center ">
             <div  >  
                 <p className="uppercase text-md font-bold tracking-widest text-[#FF914D]">LET'S BUILD SOMETHING TOGETHER</p>
