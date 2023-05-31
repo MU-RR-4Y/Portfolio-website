@@ -11,7 +11,7 @@ const About = () => {
                 <p className="uppercase text-xl tracking-widest font-bold text-[#1166E6]">About</p>
                 <h2 className="py-4">Who I Am</h2>
                 <p className="py-2 text-gray-600">A junior software developer recently graduated from Codeclan, I have a background of 9 years in Investment Banking Operations across various roles. 
-                    I am used to working in a high volume and fast paced environment, I am a quick learner and love to tackle and solve problems. 
+                    I am used to working in a high volume and fast paced environment. I am a quick learner and love to tackle and solve problems. 
                 </p> 
                 <p className="py-2 text-gray-600">
                   I initially explored software development through self-learning as a hobby and then opted to pursue a career change via CodeClan’s Software Development course 

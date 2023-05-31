@@ -33,10 +33,10 @@ const Contact = () => {
                         <div>
                             <p className='uppercase pt-8'>Connect with Me</p>
                             <div className='flex items-center justify-around py-4'>
-                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full bg-[#F4F3EE] shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                     <Link href={'https://www.linkedin.com/in/michael-murray-92003474/'}><FaLinkedinIn/></Link>
                                     </div>
-                                    <div className="rounded-full shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                                    <div className="rounded-full bg-[#F4F3EE] shadow-lg shadow-[#004aad] p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                                     <Link href={'https://github.com/MU-RR-4Y'}><FaGithub/></Link>
                                     </div>
                             </div>
@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
             <div className='flex justify-center py-12'>
                 <Link href={'/'}>
-                    <div className="rounded-full shadow-lg shadow-[#004AAD] p-4 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full bg-[#F4F3EE] shadow-lg shadow-[#004AAD] p-4 cursor-pointer hover:scale-105 ease-in duration-300">
                         <HiOutlineChevronDoubleUp className='m-auto text-[#1166E6]' size={30}/>
                     </div>
                 </Link>

@@ -21,7 +21,7 @@ const page = () => {
                 <h3>Built with JavaScript, React, Express & MongoDB</h3>
             </div>
         </div>
-        <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8'>
+        <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8 items-start'>
             <div className='col-span-4'>
                 <h2>Overview</h2>
                 <p>Dino Trumps is a dinosaur take on the popular card game top trumps. This was built over a week as a group project using Node.JS React,Express & MongoDb.</p>
