@@ -6,6 +6,7 @@ import React, {useState, useEffect} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
+import Logo from '../public/static/images/nav_Logo.png'
 
 
 const Navbar = () => {
@@ -91,7 +92,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
             <Link href='/'>
                 <Image 
-                    src="/../public/static/images/nav_Logo.png" 
+                    src={Logo} 
                     alt="/" 
                     width={100} 
                     height={100}
