@@ -66,7 +66,7 @@ const Contact = () => {
                         <div>
                             <h2 className='text-[#004aad] py-2'>Michael <span className='text-[#1166E6]'>Murray</span></h2>
                             <p className='text-[#ff914d] font-bold'>Junior Developer</p>
-                            <p className='py-4'>Contact details below</p>
+                            <p className='py-4'>Connect with me via LinkedIn, GitHub or send me a message.</p>
                         </div>
                         {/* social links */}
                         <div>
