@@ -1,11 +1,50 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useRef } from 'react'
 import {AiOutlineMail} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {BsPersonLinesFill} from 'react-icons/bs';
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
 import Link from 'next/link';
+import emailjs from 'emailjs-com';
+import {TiTick} from 'react-icons/ti';
 
 const Contact = () => {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [subject, setSubject] = useState('')
+    const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+
+
+    const form = useRef();
+
+    const sendEmail = (e)=>{
+        e.preventDefault();
+
+        emailjs.sendForm('default_service', 'template_y4qg0td', form.current, 'K4wLkMk6iiGbIk3O_')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          
+          setSubmitted(true);
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+
+    }
+
+    const sendAnotherMessage = ()=>{
+        setSubmitted(false)
+        
+    }
+    
+    
+
   return (
     <div id='contact' className='pt-8'>
 
@@ -48,33 +87,85 @@ const Contact = () => {
 
             {/* right-side div - contact form */}
 
+            {/* add sent message feedback */}
+
+            {submitted ? 
+                <div className='w-full col-span-3 flex flex-col items-center'>
+
+                <div className='flex items-center justify-center'>
+                    <h2>Message Sent</h2>
+                     <TiTick className='text-[#004AAD] w-10 h-10'/>
+                </div>
+                    
+                    <button onClick={sendAnotherMessage} className='px-10 py-2 mt-4'>Send another message</button>
+                </div>
+
+
+                :
+
                 <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                     <div className='p-4'>
-                        <form >
+                        <form  onSubmit={sendEmail} ref={form} >
                             {/* <div className='grid md:grid-cols-2 gap-4 w-full py-2'> */}
                                 <div className='flex flex-col py-2'>
-                                    <label className='uppercase text-sm py-2'>Name:</label>
-                                    <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
+                                    <label htmlFor='name' className='uppercase text-sm py-2'>Name:</label>
+                                    <input 
+                                    required
+                                    id='name'
+                                    name='name'
+                                    onChange={e => setName(e.target.value)}
+                                    value ={name}
+                                    className='border-2 rounded-lg p-3 flex border-gray-300' 
+                                    type="text" 
+                                    />
                                 </div>
                             {/* </div> */}
                             <div className='flex flex-col py-2'>
-                                <label className='uppercase text-sm py-2'>Email:</label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email" />
+                                <label htmlFor='email' className='uppercase text-sm py-2'>Email:</label>
+                                <input 
+                                required
+                                id='email'
+                                name='email'
+                                onChange={e => setEmail(e.target.value)}
+                                value={email}
+                                className='border-2 rounded-lg p-3 flex border-gray-300' 
+                                type="email" 
+                                />
                             </div>
                             <div className='flex flex-col py-2'>
-                                <label className='uppercase text-sm py-2'>Subject:</label>
-                                <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
+                                <label htmlFor='subject' className='uppercase text-sm py-2'>Subject:</label>
+                                <input 
+                                required
+                                id='subject'
+                                name='subject'
+                                onChange={e => setSubject(e.target.value)}
+                                value={subject}
+                                className='border-2 rounded-lg p-3 flex border-gray-300' 
+                                type="text" 
+                                />
                             </div>
                             <div className='flex flex-col py-2'>
-                                <label className='uppercase text-sm py-2'>Message:</label>
-                                <textarea className='border-2 rounded-lg p-3 flex border-gray-300'rows={10} ></textarea>
+                                <label htmlFor='message' className='uppercase text-sm py-2'>Message:</label>
+                                <textarea
+                                required
+                                id='message'
+                                name='message'
+                                onChange={e => setMessage(e.target.value)}
+                                value={message}
+                                className='border-2 rounded-lg p-3 flex border-gray-300'rows={10} 
+                                ></textarea>
                             </div>
-                            <button className='w-full p-4 text-gray-100 mt-4'>
+                            <button 
+                            type='submit'
+                            className='w-full bg-gradient-to-bl from-[#ffbd59] to-[#ff914d] p-4 text-gray-100 mt-4'>
                                 Send Message
                             </button>
                         </form>
                     </div>
                 </div>
+            
+
+            }
             </div>
             <div className='flex justify-center py-12'>
                 <Link href={'/'}>
