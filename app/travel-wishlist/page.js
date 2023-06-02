@@ -29,11 +29,11 @@ const page = () => {
                 </p>
                 <h3 className='mt-4'>Features</h3>
                 <p className='py-2'>
-                    Users may create a wishlist of destinations they wish to visit and theen when they have visitied a destination it can be updated on their profile as such. 
+                    Users may create a wishlist of destinations they wish to visit and then when they have visited a destination it can be updated on their profile as such. 
                     The app tracks which destinations a user has added to their wishlist and also which destinations each user has visited.
                 </p>
                 <p className='py-2'>
-                    Users may also add new destinations to the app if they cannot find the one they are seaching for and there is a 'Travel Leaderboard' which ranks users based on how many of the deastinations they have visited.
+                    Users may also add new destinations to the app if they cannot find the one they are seaching for and there is a 'Travel Leaderboard' which ranks users based on how many of the destinations they have visited.
                 </p >
                 <h3 className='mt-4'>Learning</h3>
                 <p className='py-2'>

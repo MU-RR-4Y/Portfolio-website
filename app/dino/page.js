@@ -24,24 +24,24 @@ const page = () => {
         <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8 items-start'>
             <div className='col-span-4'>
                 <h2>Overview</h2>
-                <p>Dino Trumps is a dinosaur take on the popular card game top trumps. This was built over a week as a group project using Node.JS React,Express & MongoDb.</p>
+                <p>Dino Trumps is a dinosaur take on the popular card game top trumps. This was built over a week as a group project using Node.JS, React,Express & MongoDb.</p>
                 <h3 className='mt-4'>Game Mechanics</h3>
                 <p className='py-2'>
                     Both the player and computer begin with 15 cards and the player has the option to select one of 6 attributes to compare against the hidden computer card. 
                     Once a selection is made, the computer card is revealed and the respective value on each card is compared with the highest value winning.                  
                 </p>
                 <p className='py-2'>
-                    The winner receives both cards to their hand and in the occurence of a draw then both cards are held in a 'Draw pile'.
+                    The winner receives both cards to their hand and in the occurence of a draw both cards are held in a 'Draw pile'.
                     The cards in the 'Draw pile' are allocated to the winner of the next turn.
                     Currently the first to hold 20 cards in their hand wins.                      
                 </p>
                 <h3 className='mt-4'>Learning</h3>
                 <p className='py-2'>
-                    Developing the project as a part of a group of four allowed me to implement Agile princilpes - from our initial planning meetings to utilising daily standups and review of work being completd.
+                    Developing the project as a part of a group of four allowed me to implement Agile princilpes - from our initial planning meetings to utilising daily standups and review of work being completed.
                     The main learning take away from this project was using Git/Github in a group project, developing across multiple branches for fixes and features and dealing with pull and merge requests and conflicts.
                 </p>
                 <p className='py-2'>    
-                    Additionally I gained experience working with APIs, initially reveiwing a host of available APIs for the game before implementing our own.
+                    Additionally I gained experience working with APIs, initially reviewing a host of available APIs for the game before implementing our own.
                 </p>
 
                 {/* <button className='px-8 py-2 mt-4 mr-8'>Demo</button> */}
