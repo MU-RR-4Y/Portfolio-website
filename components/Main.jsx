@@ -14,7 +14,7 @@ const Main = () => {
                 <h1 className="py-4 text-gray-700">Hi, I'm <span className="text-[#1166E6]">Michael</span></h1>
                 <h1 className="py-4 text-gray-700">A Junior Developer</h1>
                 <p className="py-4 text-gray-600 max-w-[70%] m-auto">
-                    A graduate of the <Link href='https://codeclan.com/courses/professional-software-development'><span className='text-[#FF914D] font-bold'>CodeClan</span></Link> Professional Software Development Course,  I'm a Junior Developer with experience building applications with Python, JavaScript & Java. 
+                    A graduate of the <span className='text-[#FF914D] font-bold'>CodeClan</span> Professional Software Development Course,  I'm a Junior Developer with experience building applications with Python, JavaScript & Java. 
                     I have also built games with Unity and C# and currently I am working on expanding my portfolio and learning new technologies.
                 </p>
 
