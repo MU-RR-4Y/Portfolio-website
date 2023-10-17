@@ -7,6 +7,7 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import Logo from '../public/static/images/nav_Logo.png'
+import { RiExternalLinkFill } from 'react-icons/ri';
 
 
 const Navbar = () => {
@@ -40,7 +41,11 @@ const Navbar = () => {
             if(pathname==='/' && window.scrollY>1){
                     setShadow(true)
                     setNavBackground('#F4F3EE')
-                } else {
+                } else if(pathname==='/blazorStockApp' && window.scrollY> 350){
+                    setShadow(true)
+                    setNavBackground('#4d4d4d')
+                }
+                else {
                     setShadow(false)
                     setNavBackground('transparent')
                            }
@@ -54,7 +59,8 @@ const Navbar = () => {
         if(
             pathname ==='/martian' ||
             pathname ==='/dino' ||
-            pathname ==='/travel-wishlist' 
+            pathname ==='/travel-wishlist' ||
+            pathname ==='/blazorStockApp'
             
         ) {
             setNavBackground('transparent')
@@ -106,6 +112,9 @@ const Navbar = () => {
                     </Link>
                     <Link href='/#about'>
                         <li className="ml-10 text-sm uppercase hover:border-b font-bold">About</li>
+                    </Link>
+                    <Link href='/#ongoing'>
+                        <li className="ml-10 text-sm uppercase hover:border-b font-bold">Ongoing Projects</li>
                     </Link>
                     <Link href='/#skills'> 
                         <li className="ml-10 text-sm uppercase hover:border-b font-bold">Skills</li>
@@ -161,6 +170,9 @@ const Navbar = () => {
                         </Link>
                         <Link href='/#about'>
                             <li onClick={()=>setNav(false)} className="py-4 text-sm">About</li>
+                        </Link>
+                        <Link href='/#ongoing'>
+                            <li onClick={()=>setNav(false)} className="py-4 text-sm">Ongoing Projects</li>
                         </Link>
                         <Link href='/#skills'>
                             <li onClick={()=>setNav(false)} className="py-4 text-sm">Skills</li>

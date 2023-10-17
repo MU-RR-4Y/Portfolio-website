@@ -5,6 +5,7 @@ import TW2 from '../public/assets/projects/TravelWishlist2.png'
 import Dino from '../public/assets/projects/Dino_trumps.png'
 import Martian from '../public/assets/projects/MartianSurvival.png'
 import Martian2 from '../public/assets/projects/MartianSurvival2.png'
+
 import Link from 'next/link'
 import ProjectItem from './ProjectItem'
 
